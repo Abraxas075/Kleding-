@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>3D-paskamer</title>
+  <meta name="description" content="Pas de kleding uit je webshop-winkelmand in 3D op een avatar met jouw maten." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b1b1d'/%3E%3Cpath d='M16 7l3 2 7 3-2 5-3-1v10H11V16l-3 1-2-5 7-3z' fill='%23f4f2ee'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="app">
+    <section class="stage">
+      <div id="viewer" class="viewer"></div>
+      <div class="toolbar" role="toolbar" aria-label="Weergave">
+        <button data-view="0">Voor</button>
+        <button data-view="90">Zij</button>
+        <button data-view="180">Achter</button>
+        <button id="spin" aria-pressed="false">Draai</button>
+        <button id="shot">Foto</button>
+      </div>
+      <div id="outfit" class="outfit"></div>
+    </section>
+    <aside class="panel">
+      <header>
+        <h1>3D-paskamer</h1>
+        <nav class="tabs" role="tablist">
+          <button role="tab" data-tab="cart" aria-selected="true">Winkelmand</button>
+          <button role="tab" data-tab="body" aria-selected="false">Mijn maten</button>
+          <button role="tab" data-tab="import" aria-selected="false">Importeren</button>
+        </nav>
+      </header>
+      <div class="pane" id="pane-cart"></div>
+      <div class="pane" id="pane-body" hidden></div>
+      <div class="pane" id="pane-import" hidden></div>
+    </aside>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
